@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Scoped Remote Access",
+    "description": "Issue secondary remote access keys restricted to selected projects and specific models."
+  }
+}

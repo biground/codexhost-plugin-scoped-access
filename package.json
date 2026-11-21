@@ -1,0 +1,38 @@
+{
+  "name": "codexhost-plugin-scoped-access",
+  "version": "0.1.0",
+  "description": "Manage scoped remote Web access keys with per-project and per-model restrictions.",
+  "repository": "https://github.com/biground/codexhost-plugin-scoped-access",
+  "homepage": "https://github.com/biground/codexhost-plugin-scoped-access#readme",
+  "type": "module",
+  "license": "LGPL-3.0-only",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./icon": "./assets/icon.svg",
+    "./locale/*": "./locale/*"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "locale",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "@deepseek-ai/cordis": "^4.0.5-alpha.1"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  }
+}
